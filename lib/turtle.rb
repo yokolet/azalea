@@ -29,6 +29,7 @@ class Turtle
     @orientation = NORTH
     @footsteps = []
     @canvas = Canvas.new(canvas_size)
+    @canvas.insert(Footstep.new(@row, @col))
   end
 
   def rt(degree)

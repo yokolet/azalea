@@ -4,6 +4,7 @@ require 'test/unit'
 require 'contest'
 require 'canvas'
 require 'footstep'
+require 'turtle'
 
 class CanvasTest < Test::Unit::TestCase
 
@@ -30,5 +31,14 @@ class CanvasTest < Test::Unit::TestCase
 
     @canvas.insert(Footstep.new(6, 1))
     assert_equal(6, @canvas.footsteps.last.row)
+  end
+
+  test "canvas shows footsteps" do
+    turtle = Turtle.new(11)
+    turtle.rt(90)
+    turtle.fd(5)
+    turtle.rt(135)
+    turtle.fd(5)
+    turtle.canvas.show
   end
 end
